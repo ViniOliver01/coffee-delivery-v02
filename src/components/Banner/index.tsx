@@ -11,7 +11,7 @@ export default function Banner() {
       backgroundRepeat="no-repeat"
       backgroundSize="cover"
     >
-      <Grid height="544px" paddingBlock={8} templateColumns="repeat(2, 1fr)" gap={14}>
+      <Grid height="544px" marginBlock={24} templateColumns="repeat(2, 1fr)" gap={14}>
         <Box>
           <Heading fontSize={"title.XL"} color="base.title">
             Encontre o café perfeito para qualquer hora do dia
