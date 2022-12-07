@@ -1,17 +1,8 @@
-import { Flex, Icon, Button } from "@chakra-ui/react";
+import { Button } from "@chakra-ui/react";
 import { Text } from "@chakra-ui/react";
 import { HiMapPin } from "react-icons/hi2";
 import { FiChevronDown } from "react-icons/fi";
-import {
-  Menu,
-  MenuButton,
-  MenuList,
-  MenuItem,
-  MenuItemOption,
-  MenuGroup,
-  MenuOptionGroup,
-  MenuDivider,
-} from "@chakra-ui/react";
+import { Menu, MenuButton, MenuList, MenuItem, MenuDivider } from "@chakra-ui/react";
 import { useState } from "react";
 
 interface LocationProps {
@@ -26,7 +17,9 @@ export default function Location({ list }: LocationProps) {
         as={Button}
         borderRadius={"6px"}
         borderWidth="2px"
-        borderColor="purple.500"
+        borderColor="purple.100"
+        _hover={{ backgroundColor: "purple.200" }}
+        _active={{ borderColor: "purple.500" }}
         backgroundColor="purple.100"
         color="purple.700"
         padding={2}
@@ -35,20 +28,23 @@ export default function Location({ list }: LocationProps) {
       >
         <Text>{text}</Text>
       </MenuButton>
-      <MenuList borderWidth="2px" borderColor="purple.500" backgroundColor="purple.100">
+      <MenuList borderWidth="2px" borderColor="purple.500" backgroundColor="purple.100" padding={0}>
         {list.map((location, index) => {
           return (
             <>
               <MenuItem
                 key={location}
+                borderBottomRadius={list.length - 1 == index ? "6px" : 0}
+                borderTopRadius={index == 0 ? "6px" : 0}
                 backgroundColor="purple.100"
                 _hover={{ backgroundColor: "purple.200" }}
                 color="purple.700"
+                paddingBlock={3}
                 onClick={(e) => setText(e.currentTarget.textContent)}
               >
                 {location}
               </MenuItem>
-              {!(list.length - 1 == index) && <MenuDivider />}
+              {!(list.length - 1 == index) && <MenuDivider margin={0} />}
             </>
           );
         })}
