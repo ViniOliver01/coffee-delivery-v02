@@ -33,6 +33,31 @@ export const theme = extendTheme({
     heading: "Baloo 2",
     body: "Roboto",
   },
+  fontSizes: {
+    title: {
+      xs: "1.125rem",
+      S: "1.25rem",
+      M: "1.5rem",
+      L: "2rem",
+      XL: "3rem",
+    },
+    text: {
+      RegularS: "0.75rem",
+      BoldS: "0.875rem",
+      RegularM: "1rem",
+      BoldM: "1rem",
+      RegularL: "1.25rem",
+      BoldL: "1.25rem",
+    },
+    components: {
+      Tag: "0.625rem",
+      ButtonG: "0.875rem",
+      ButtonS: "0.75rem",
+    },
+  },
+  lineHeight: {
+    heading: "130%",
+  },
   styles: {
     global: {
       body: {
