@@ -18,8 +18,8 @@ const locationsList = [
 
 export default function Header() {
   return (
-    <Flex flex="1" justify={"center"} paddingBlock={10} paddingInline={24}>
-      <Flex flex="1" maxWidth={1440}>
+    <Flex flex="1" justify={"center"} paddingBlock={10}>
+      <Flex flex="1">
         <Flex marginRight="auto" gap={8}>
           <Link href={"#"}>
             <Image src="./Logo.svg" />
