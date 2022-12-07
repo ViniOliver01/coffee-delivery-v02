@@ -21,7 +21,7 @@ export default function Header() {
     <Flex flex="1" justify={"center"} paddingBlock={10}>
       <Flex flex="1">
         <Flex marginRight="auto" gap={8}>
-          <Link href={"#"}>
+          <Link href={"/"}>
             <Image src="./Logo.svg" />
           </Link>
           <Location list={locationsList} />

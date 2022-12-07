@@ -9,7 +9,7 @@ interface CartProps {
 export default function Cart({ amount, totalPrice }: CartProps) {
   return (
     <Flex gap={2} align="center">
-      <Link href="#">
+      <Link href="/checkout">
         <IconButton
           aria-label="Search database"
           as={IoMdCart}
