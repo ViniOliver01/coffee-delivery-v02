@@ -31,9 +31,8 @@ export default function Location({ list }: LocationProps) {
       <MenuList borderWidth="2px" borderColor="purple.500" backgroundColor="purple.100" padding={0}>
         {list.map((location, index) => {
           return (
-            <>
+            <div key={location}>
               <MenuItem
-                key={location}
                 borderBottomRadius={list.length - 1 == index ? "6px" : 0}
                 borderTopRadius={index == 0 ? "6px" : 0}
                 backgroundColor="purple.100"
@@ -45,7 +44,7 @@ export default function Location({ list }: LocationProps) {
                 {location}
               </MenuItem>
               {!(list.length - 1 == index) && <MenuDivider margin={0} />}
-            </>
+            </div>
           );
         })}
       </MenuList>
